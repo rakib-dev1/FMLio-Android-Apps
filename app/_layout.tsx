@@ -1,4 +1,5 @@
 // RootLayout.tsx
+import BottomNav from '@/components/shared/bottom-nav/bottom_nav';
 import HeaderWithDrawer from '@/components/shared/header/header';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { Stack } from 'expo-router';
@@ -15,7 +16,9 @@ export default function RootLayout() {
           <HeaderWithDrawer>
             <Stack screenOptions={{ headerShown: false }}>
               <Stack.Screen name="index" />
+              <Stack.Screen name="chat" />
             </Stack>
+            <BottomNav />
           </HeaderWithDrawer>
         </SafeAreaView>
       </SafeAreaProvider>

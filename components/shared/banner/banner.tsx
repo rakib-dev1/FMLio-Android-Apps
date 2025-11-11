@@ -13,7 +13,8 @@ export default function Banner() {
         <View style={styles.wrapper}>
             <PagerView style={styles.container} initialPage={0}>
                 {data?.map((item: any) => (
-                    <View key={item.id} style={styles.page}>
+                    
+                    <View key={item?._id} style={styles.page}>
                         <Image
                             source={{ uri: item.imageUrl }}
                             style={styles.image}
